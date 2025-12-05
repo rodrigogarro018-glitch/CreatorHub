@@ -167,6 +167,50 @@
   color: #A855F7;
 }
 
+.test-credentials {
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.test-credentials h4 {
+  color: #8B5CF6;
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.test-credentials p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.test-credentials strong {
+  color: white;
+}
+
+.btn-secondary {
+  background: rgba(139, 92, 246, 0.2);
+  color: #8B5CF6;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.btn-secondary:hover {
+  background: rgba(139, 92, 246, 0.3);
+  transform: translateY(-1px);
+}
+
 @media (max-width: 480px) {
   .login-container {
     max-width: 100%;

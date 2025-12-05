@@ -8,9 +8,18 @@ const LoginPage = ({ onLogin }) => {
 
   const handleLogin = (e) => {
     e.preventDefault()
-    // Simular login
-    if (email && password) {
+    // Credenciais de teste
+    const testCredentials = {
+      email: 'teste@creatorhub.com',
+      password: '123456'
+    }
+    
+    // Verificar credenciais de teste ou permitir qualquer login válido
+    if ((email === testCredentials.email && password === testCredentials.password) || 
+        (email && password)) {
       onLogin()
+    } else {
+      alert('Credenciais inválidas! Use: teste@creatorhub.com / 123456')
     }
   }
 
@@ -88,6 +97,22 @@ const LoginPage = ({ onLogin }) => {
               Entrar
             </button>
           </form>
+
+          <div className="test-credentials">
+            <h4>🧪 Credenciais de Teste</h4>
+            <p><strong>Email:</strong> teste@creatorhub.com</p>
+            <p><strong>Senha:</strong> 123456</p>
+            <button 
+              type="button" 
+              className="btn-secondary"
+              onClick={() => {
+                setEmail('teste@creatorhub.com')
+                setPassword('123456')
+              }}
+            >
+              Preencher Automaticamente
+            </button>
+          </div>
 
           <p className="create-account">
             Não tem uma conta?{' '}

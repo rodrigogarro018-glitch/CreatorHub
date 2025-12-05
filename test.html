@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Hub - Teste</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1b69 50%, #000 100%);
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            filter: drop-shadow(0 0 20px rgba(233, 30, 99, 0.5));
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #e91e63, #9c27b0, #673ab7);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            p { font-size: 1rem; }
+            .features { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg viewBox="0 0 200 200" class="logo">
+            <defs>
+                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="50%" stop-color="#9c27b0" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="80" fill="url(#logoGradient)" />
+            <polygon points="80,70 80,130 130,100" fill="white" />
+        </svg>
+        
+        <h1>Creator Hub</h1>
+        <p>Sua plataforma de entretenimento gratuita com filmes, séries, animes e jogos exclusivos</p>
+        
+        <div class="features">
+            <div class="feature">🎬 Filmes</div>
+            <div class="feature">📺 Séries</div>
+            <div class="feature">🎌 Animes</div>
+            <div class="feature">🎮 Jogos</div>
+        </div>
+        
+        <p style="margin-top: 2rem; font-size: 0.9rem;">
+            ✅ Servidor funcionando corretamente!<br>
+            ✅ Navegação implementada<br>
+            ✅ Logo personalizada<br>
+            ✅ Responsivo para mobile<br>
+            ✅ Animações suaves
+        </p>
+        
+        <p style="font-size: 0.8rem; opacity: 0.6;">
+            Credenciais de teste: teste@creatorhub.com / 123456
+        </p>
+    </div>
+</body>
+</html>

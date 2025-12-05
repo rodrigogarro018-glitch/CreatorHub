@@ -28,6 +28,30 @@
 .logo {
   display: flex;
   align-items: center;
+  gap: 12px;
+}
+
+.logo-svg {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 15px rgba(255, 110, 199, 0.4));
+  transition: all 0.3s ease;
+  animation: logoHover 3s ease-in-out infinite;
+}
+
+.logo-svg:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(255, 110, 199, 0.6));
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #e91e63, #9c27b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: none;
 }
 
 .logo-icon {
@@ -262,6 +286,10 @@
   position: absolute;
   top: 12px;
   right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
 }
 
 .card-type {
@@ -274,6 +302,15 @@
   text-transform: uppercase;
 }
 
+.card-rating {
+  background: rgba(233, 30, 99, 0.9);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .card-title {
   font-size: 16px;
   font-weight: 600;
@@ -284,43 +321,154 @@
 
 @media (max-width: 768px) {
   .header-content {
-    flex-direction: column;
-    gap: 16px;
+    padding: 12px 0;
   }
   
   .header-left {
-    gap: 16px;
+    gap: 20px;
+  }
+  
+  .logo-text {
+    display: block;
   }
   
   .navigation {
     flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .nav-tab {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .header-right {
+    gap: 12px;
   }
   
   .search-input {
-    width: 250px;
+    width: 200px;
   }
   
   .search-input:focus {
-    width: 280px;
+    width: 250px;
   }
   
   .hero-title {
-    font-size: 36px;
+    font-size: 32px;
   }
   
   .hero-subtitle {
     font-size: 16px;
   }
   
+  .section-title {
+    font-size: 24px;
+  }
+  
   .carousel-track {
     gap: 12px;
+    padding-left: 16px;
   }
   
   .featured-card {
-    flex: 0 0 160px;
+    flex: 0 0 140px;
   }
   
   .card-image {
-    height: 220px;
+    height: 200px;
+  }
+  
+  .card-title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .header-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .search-container {
+    flex: 1;
+    max-width: 200px;
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+  
+  .search-input:focus {
+    width: 100%;
+  }
+  
+  .hero-section {
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  
+  .hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .carousel-controls {
+    align-self: flex-end;
+  }
+  
+  .featured-card {
+    flex: 0 0 120px;
+  }
+  
+  .card-image {
+    height: 160px;
+  }
+  
+  .card-overlay {
+    top: 8px;
+    right: 8px;
+    gap: 4px;
+  }
+  
+  .card-type, .card-rating {
+    padding: 2px 6px;
+    font-size: 10px;
+  }
+}
+
+/* Animações da logo */
+@keyframes logoHover {
+  0%, 100% { 
+    filter: drop-shadow(0 0 15px rgba(255, 110, 199, 0.4));
+  }
+  50% { 
+    filter: drop-shadow(0 0 20px rgba(255, 110, 199, 0.6));
   }
 }
