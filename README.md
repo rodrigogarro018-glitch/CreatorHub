@@ -1,11 +1,21 @@
-# Creator Hub
+# 🎬 Creator Hub - Plataforma Web Completa
 
-Uma plataforma de entretenimento completa com filmes, séries, animes e jogos exclusivos.
+Uma plataforma de entretenimento moderna com filmes, séries, animes e jogos exclusivos, featuring logo personalizada e animações Netflix-style.
+
+## 🌟 **Funcionalidades da Versão Web**
+
+- ✨ **Logo Personalizada** - Design único com letra "C" e triângulo de play
+- 🎬 **Tela de Loading Netflix-Style** - Animação profissional de carregamento
+- 🧭 **Navegação Funcional** - Categorias: Início, Filmes, Séries, Animes, Jogos
+- 📱 **Totalmente Responsivo** - Otimizado para desktop, tablet e mobile
+- 🔍 **Sistema de Busca** - Busca integrada no header
+- 🎨 **Animações Suaves** - Efeitos de hover, transições e gradientes
+- 🚀 **Servidor de Produção** - Pronto para deploy
 
 ## 🚀 Versões Disponíveis
 
-### 📱 Versão Web (React + Vite)
-Aplicação web responsiva pronta para produção.
+### 📱 Versão Web (React + Vite) - **NOVA VERSÃO COMPLETA**
+Aplicação web responsiva com logo personalizada e funcionalidades completas.
 
 ### 📱 Versão Mobile (React Native + Expo)
 Aplicação mobile para Android e iOS.
@@ -21,23 +31,56 @@ O aplicativo foi desenvolvido baseado no design fornecido, incluindo:
 
 ## 🛠️ Instalação e Execução
 
-### Versão Web
+### 🌐 Versão Web - **GUIA COMPLETO**
 
+#### **Pré-requisitos:**
+- Node.js 16+ instalado
+- Python 3.6+ instalado (para servidor de produção)
+- Git instalado
+
+#### **1. Clonar e Instalar:**
 ```bash
-# Navegar para o diretório raiz
+# Clonar o repositório
+git clone https://github.com/rodrigogarro018-glitch/CreatorHub.git
 cd CreatorHub
 
 # Instalar dependências
 npm install
+```
 
+#### **2. Modo Desenvolvimento (Recomendado para testes):**
+```bash
 # Executar em modo desenvolvimento
 npm run dev
 
-# Build para produção
-npm run build
+# A aplicação estará disponível em:
+# http://localhost:5173
 ```
 
-A aplicação estará disponível em `http://localhost:5173`
+#### **3. Modo Produção:**
+```bash
+# Build para produção
+npm run build
+
+# Iniciar servidor de produção
+python3 server.py
+
+# A aplicação estará disponível em:
+# http://localhost:12001
+```
+
+#### **🔐 Credenciais de Teste:**
+- **Email:** `teste@creatorhub.com`
+- **Senha:** `123456`
+
+#### **📱 Como Testar as Funcionalidades:**
+
+1. **Tela de Loading:** Veja a animação com sua logo personalizada
+2. **Login:** Use as credenciais acima
+3. **Navegação:** Clique em Início, Filmes, Séries, Animes, Jogos
+4. **Busca:** Digite no campo de busca no header
+5. **Responsividade:** Teste em diferentes tamanhos de tela
+6. **Animações:** Hover na logo e cards para ver efeitos
 
 ### Versão Mobile
 
@@ -157,14 +200,21 @@ eas build --platform android --clear-cache
 
 ```
 CreatorHub/
-├── src/                    # Versão Web
+├── src/                           # Versão Web
 │   ├── components/
-│   │   ├── LoginPage.jsx
-│   │   ├── Dashboard.jsx
-│   │   └── PublishModal.jsx
-│   ├── App.jsx
-│   └── main.jsx
-├── CreatorHubMobile/       # Versão Mobile
+│   │   ├── LoadingScreen.jsx      # 🆕 Tela de loading com logo personalizada
+│   │   ├── LoadingScreen.css      # 🆕 Animações da tela de loading
+│   │   ├── LoginPage.jsx          # Página de login
+│   │   ├── LoginPage.css          # Estilos do login
+│   │   ├── Dashboard.jsx          # 🆕 Dashboard com navegação funcional
+│   │   ├── Dashboard.css          # 🆕 Estilos e responsividade
+│   │   └── PublishModal.jsx       # Modal de publicação
+│   ├── App.jsx                    # 🆕 App principal com loading screen
+│   └── main.jsx                   # Ponto de entrada
+├── server.py                      # 🆕 Servidor de produção Python
+├── test.html                      # 🆕 Página de teste
+├── vite.config.js                 # Configuração do Vite
+├── CreatorHubMobile/              # Versão Mobile
 │   ├── screens/
 │   │   ├── LoginScreen.js
 │   │   └── DashboardScreen.js
@@ -172,8 +222,38 @@ CreatorHub/
 │   │   └── PublishModal.js
 │   ├── App.js
 │   └── app.json
-└── README.md
+└── README.md                      # 🆕 Guia completo atualizado
 ```
+
+## 🐛 **Solução de Problemas**
+
+### **Erro de Porta Ocupada:**
+```bash
+# Desenvolvimento - se porta 5173 estiver ocupada:
+npm run dev -- --port 3000
+
+# Produção - se porta 12001 estiver ocupada:
+# Edite server.py e mude: PORT = 12001 para outra porta
+```
+
+### **Problemas de Dependências:**
+```bash
+# Limpar cache e reinstalar
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### **Problemas de Build:**
+```bash
+# Limpar build anterior
+rm -rf dist
+npm run build
+```
+
+### **Testando Responsividade:**
+1. Abra ferramentas de desenvolvedor (F12)
+2. Clique no ícone de dispositivo móvel
+3. Teste resoluções: Desktop (1920x1080), Tablet (768x1024), Mobile (375x667)
 
 ## 🎮 Como Testar
 
